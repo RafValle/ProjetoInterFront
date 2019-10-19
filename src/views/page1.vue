@@ -47,6 +47,7 @@
                     <option value="">--</option>
                     <option value="PR">MA</option>
                     <option value="PR">RJ</option>
+                    <option value="PR">RJ</option>
                 </select>
             </div>
         </fieldset>
