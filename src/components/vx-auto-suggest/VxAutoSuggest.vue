@@ -185,6 +185,8 @@ export default{
 	},
 	mounted() {
 		if(this.autoFocus) this.focusInput();
+
+		
 	}
 }
 </script>

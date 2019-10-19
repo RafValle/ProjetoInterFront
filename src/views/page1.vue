@@ -1,6 +1,9 @@
 <template>
+
+
 	
 <form action="#" method="post">
+    
     <h2>MPU</h2>
 
     <h6>____</h6>

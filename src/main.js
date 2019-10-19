@@ -45,6 +45,8 @@ Vue.use(VueHammer)
 import 'prismjs'
 import 'prismjs/themes/prism-tomorrow.css'
 
+import axios from 'axios'
+
 
 // Feather font icon
 require('./assets/css/iconfont.css')
@@ -55,5 +57,6 @@ Vue.config.productionTip = false
 new Vue({
     router,
     store,
-    render: h => h(App)
+    render: h => h(App),
+    axios
 }).$mount('#app')
