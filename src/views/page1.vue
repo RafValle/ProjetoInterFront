@@ -2,8 +2,8 @@
 	
 <form action="#" method="post">
     <h2>MPU</h2>
+
     <h6>____</h6>
-    
     <fieldset>
         <fieldset class="grupo">
             <div class="campo">
@@ -56,9 +56,7 @@
 </form>
 </template>
 
-<!-- css-->
-<style >
-
+<style>
 * {
     margin: 0;
     padding: 0;
@@ -143,4 +141,5 @@ fieldset.grupo .campo {
 .botao, select, label.checkbox {
     cursor: pointer;
 }
+
 </style>
