@@ -42,10 +42,6 @@ export default {
     });
     this.$store.dispatch("updateWindowWidth", window.innerWidth);
 
-    axios
-      .get("http://localhost:3333/")
-      .then(response => console.log(response)) //caso retorne um sucesso
-      .catch(error => console.log(error)); //caso ocorra algum erro
   },
   beforeDestroy() {
     window.removeEventListener("resize", this.handleWindowResize);
