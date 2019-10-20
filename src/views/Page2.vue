@@ -2,7 +2,7 @@
 	
 <form action="#" method="post">
 <link rel="stylesheet" type="text/css" href="page.css" media="screen" />
-    <h2>MPU</h2>
+    <h2>Avaliação de Risco</h2>
     <h6>____</h6>
 
     <fieldset>
@@ -14,6 +14,8 @@
                 <input type="text" id="nome" name="nome" style="width: 40em" value="">
                 <label for="snome">Sobrenome</label>
                 <input type="text" id="snome" name="snome" style="width: 40em" value="">
+                <label for="filiação">Filiação</label>
+                <input type="text" id="filiação" nome="filiação" style="width: 40em" value="">
             </div>
             <div class="campo">
                 

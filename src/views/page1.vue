@@ -3,7 +3,7 @@
 <form action="#" method="post">
     <h2>MPU</h2>
 
-    <h6>____</h6>
+
     <fieldset>
         <fieldset class="grupo">
             <div class="campo">
@@ -57,7 +57,12 @@
 </template>
 
 <style>
-* {
+
+h2 { 
+    text-align: center 
+}
+
+*{
     margin: 0;
     padding: 0;
 }
@@ -82,6 +87,7 @@ body, input, select, textarea, button {
 
 .campo {
     margin-bottom: 1em;
+    
 }
 
 .campo label {
