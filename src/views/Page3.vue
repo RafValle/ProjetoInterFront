@@ -2,7 +2,7 @@
 	
 <form action="#" method="post">
 <link rel="stylesheet" type="text/css" href="page.css" media="screen" />
-    <h2>MPU</h2>
+    <h2>Autorização de Intimação por Whatsapp</h2>
     <h6>____</h6>
     
     <fieldset>
