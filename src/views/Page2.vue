@@ -2,7 +2,7 @@
 
 <template>
   <form action="#" method="post">
-    <h2>MPU</h2>
+    <h2>Avaliação de Risco</h2>
     <h6>____</h6>
     
     <fieldset>
