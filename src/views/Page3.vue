@@ -1,10 +1,17 @@
 <template>
-	
-<form action="#" method="post">
-<link rel="stylesheet" type="text/css" href="page.css" media="screen" />
-    <h2>Autorização de Intimação por Whatsapp</h2>
-    <h6>____</h6>
-    
+  <form action="#" method="post">
+    <div class="campo">
+    <h5>
+        SECRETARIA DE SEGURANÇA PÚBLICA DO MARANHÃO
+            DELEGACIA GERAL DE POLÍCIA CIVIL
+        SUPERINTENDÊNCIA DE POLÍCIA CIVIL DA CAPITAL
+              DELEGACIA ESPECIAL DA MULHER
+        PLANTÃO ESPECIALIZADO EM ATENDIMENTO A MULHER
+    </h5>
+    </div>
+    <div class="titulo">
+    <h2>TERMO DE CONSENTIMENTO DE INTIMAÇÃO POR WHATSAPP</h2>
+    </div>
     <fieldset>
       <fieldset class="grupo">
         <div class="campo">
@@ -151,3 +158,108 @@ export default {
   }
 };
 </script>
+
+
+
+
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  border: 0;
+}
+
+body,
+input,
+select,
+textarea,
+button {
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+.grupo:before,
+.grupo:after {
+  content: " ";
+  display: table;
+}
+
+.grupo:after {
+  clear: both;
+}
+
+.campo {
+  margin-bottom: 1em;
+}
+
+.titulo {
+  margin-bottom: 1em;
+  text-align: center
+}
+
+.campo label {
+  margin-bottom: 0.4em;
+  color: #666;
+  display: block;
+}
+
+fieldset.grupo .campo {
+  float: left;
+  margin-right: 1em;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="url"],
+.campo input[type="tel"],
+.campo select,
+.campo textarea {
+  padding: 0.2em;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
+.campo select option {
+  padding-right: 1em;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  background: #ffc;
+}
+
+.campo label.checkbox {
+  color: #000;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.botao {
+  font-size: 1.5em;
+  background: #7367f0;
+  border: 0;
+  margin-bottom: 1em;
+  color: #fff;
+  padding: 0.2em 0.6em;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.botao:hover {
+  background: #7367f0;
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: none;
+}
+
+.botao,
+select,
+label.checkbox {
+  cursor: pointer;
+}
+</style>

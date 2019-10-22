@@ -1,9 +1,17 @@
-
-
 <template>
   <form action="#" method="post">
-    <h2>Avaliação de Risco</h2>
-     
+    <div class="campo">
+    <h5>
+        SECRETARIA DE SEGURANÇA PÚBLICA DO MARANHÃO
+            DELEGACIA GERAL DE POLÍCIA CIVIL
+        SUPERINTENDÊNCIA DE POLÍCIA CIVIL DA CAPITAL
+              DELEGACIA ESPECIAL DA MULHER
+        PLANTÃO ESPECIALIZADO EM ATENDIMENTO A MULHER
+    </h5>
+    </div>
+    <div class="titulo">
+    <h2>QUESTIONÁRIO DE AVALIAÇÃO DE RISCO</h2>
+    </div>
     <fieldset>
       <fieldset class="grupo">
         <div class="campo">
@@ -93,9 +101,32 @@
           <label for="estado">Estado</label>
           <select name="estado" id="estado" v-model="postsBody">
             <option value>--</option>
-            <option value="PR">MA</option>
-            <option value="PR">RJ</option>
-            <option value="PR">SP</option>
+            <option value="AL">AL</option>
+          <option value="AP">AP</option>
+          <option value="AM">AM</option>
+          <option value="BA">BA</option>
+          <option value="CE">CE</option>
+          <option value="DF">DF</option>
+          <option value="ES">ES</option>
+          <option value="GO">GO</option>
+          <option selected="selected" value="MA">MA</option>
+          <option value="MG">MG</option>
+          <option value="MT">MT</option>
+          <option value="MS">MS</option>
+          <option value="PA">PA</option>
+          <option value="PB">PB</option>
+          <option value="PR">PR</option>
+          <option value="PE">PE</option>
+          <option value="PI">PI</option>
+          <option value="RJ">RJ</option>
+          <option value="RN">RN</option>
+          <option value="RS">RS</option>
+          <option value="RO">RO</option>
+          <option value="RR">RR</option>
+          <option value="SC">SC</option>
+          <option value="SP">SP</option>
+          <option value="SE">SE</option>
+          <option value="TO">TO</option>
           </select>
         </div>
       </fieldset>
@@ -103,7 +134,19 @@
     </fieldset>
   </form>
 </template>
-
+<script>
+export default {
+  data() {
+    return {
+      title: '',
+      username: '',
+      siteUsername: '',
+      amount: '',
+      textarea: '',
+    }
+  }
+}
+</script>
 
 
 <script>
@@ -186,6 +229,11 @@ button {
 
 .campo {
   margin-bottom: 1em;
+}
+
+.titulo {
+  margin-bottom: 1em;
+  text-align: center
 }
 
 .campo label {
