@@ -12,7 +12,6 @@
     <div class="titulo">
     <h2>MPU</h2>
     </div>
-   
     <fieldset>
       <fieldset class="grupo">
         <div class="campo">
@@ -53,19 +52,39 @@
             value="dataNascimentoOfendida"
           />
           <label for="nome">Documento de Identidade?</label>
-          <label>
-            <input type="radio" name="sexo" value="true" v-model="postsBody" /> Sim
-          </label>
-          <label>
-            <input type="radio" name="sexo" value="false" v-model="postsBody" /> Não
-          </label>
+              <div class="checkbox">
+                <vs-checkbox  
+                class="mb-3"
+                name= "sexo"
+                value="true"
+                v-model="opcoes"> Sim           
+                </vs-checkbox>
+              </div>
+              <div class="checkbox">
+                <vs-checkbox  
+                class="mb-3"
+                name= "sexo"
+                value="false"
+                v-model="opcoes"> Não           
+                </vs-checkbox>
+              </div>
           <label for="nome">Trouxe comprovante de residencia?</label>
-          <label>
-            <input type="radio" name="sexo" value="true" v-model="postsBody" /> Sim
-          </label>
-          <label>
-            <input type="radio" name="sexo" value="false" v-model="postsBody" /> Não
-          </label>
+              <div class="checkbox">
+                    <vs-checkbox  
+                    class="mb-3"
+                    name= "sexo"
+                    value="true"
+                    v-model="opcoes"> Sim           
+                    </vs-checkbox>
+                  </div>
+                  <div class="checkbox">
+                    <vs-checkbox  
+                    class="mb-3"
+                    name= "sexo"
+                    value="false"
+                    v-model="opcoes"> Não           
+                    </vs-checkbox>
+                  </div>
           <label for="nome">Filiação Ofendida(Mãe ou Pai)</label>
           <input
             type="text"
