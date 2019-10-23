@@ -25,7 +25,7 @@
             value="nomeOfendida"/>
 
           CPF
-          <vs-input label-placeholder for="Nome"
+          <vs-input label-placeholder for="CPF"
             type="text"
             id="CPF"
             name="CPF"
@@ -214,10 +214,6 @@ export default {
 };
 </script>
 
-
-
-
-
 <style>
 * {
   margin: 0;
@@ -257,7 +253,7 @@ button {
 }
 
 .campo label {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.5em;
   color: #666;
   display: block;
 }
