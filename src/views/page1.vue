@@ -15,7 +15,8 @@
     <fieldset>
       <fieldset class="grupo">
         <div class="campo">
-          <vs-input label-placeholder for="nome"
+          Nome
+          <vs-input label-placeholder for="Nome"
             type="text"
             id="nome"
             name="nome"
@@ -23,15 +24,15 @@
             v-model="nome"
             value="nomeOfendida"/>
 
-          <label for="nome">CPF</label>
-          <input
+          CPF
+          <vs-input label-placeholder for="Nome"
             type="text"
             id="CPF"
             name="CPF"
             style="width: 40em"
-            v-model="postsBody"
-            value="cpfOfendida"
-          />
+            v-model="CPF"
+            value="CPFOfendida"/>
+
           <label for="nome">Rg da Ofendida</label>
           <input
             type="text"
