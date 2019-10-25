@@ -1,9 +1,9 @@
 <template>
 <vs-row vs-justify="center">
 <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="11">
- <vs-card>
-  <form action="#" method="post">
-    <div class="campo">
+<vs-card>
+<form action="#" method="post">
+   <div class="campo">
     <h5>
         SECRETARIA DE SEGURANÇA PÚBLICA DO MARANHÃO
             DELEGACIA GERAL DE POLÍCIA CIVIL
@@ -75,7 +75,7 @@
                     <div class="checkbox">
                       <vs-checkbox  
                         class="mb-3"
-                        name= "sexo"
+                        name= "documentoidentidade"
                         value="true"
                         v-model="opcoes"> Sim           
                       </vs-checkbox>
@@ -83,7 +83,7 @@
                     <div class="checkbox">
                       <vs-checkbox  
                         class="mb-3"
-                        name= "sexo"
+                        name= "documentoidentidade"
                         value="false"
                         v-model="opcoes"> Não           
                       </vs-checkbox>
@@ -107,69 +107,69 @@
                         </vs-checkbox>
                       </div>
      
-          <div class="centerx labelx">
-            <vs-input
-            id="Telefone" 
-            label="Telefone da Ofendida"
-            
-            v-model="telefone"/>
-            <vs-input
-            id="Cidade" 
-            label="Cidade" 
-            v-model="cidade"/>
-          </div>
-                 
-        </div>
+                      <div class="centerx labelx">
+                        <vs-input
+                        id="Telefone" 
+                        label="Telefone da Ofendida"
+                        
+                        v-model="telefone"/>
+                        <vs-input
+                        id="Cidade" 
+                        label="Cidade" 
+                        v-model="cidade"/>
+                      </div>
+                            
+                    </div>
 
 
-        <div class="con-select-example">
-          <vs-select
-          class="selectExample" 
-          name="estado" 
-          id="estado" 
-          label="Estado"
-          v-model="selectestado">
-          <!--em construção
-            <vs-select-item value>--</vs-select-item>
-            <vs-select-item value="AL" v-text="AL"></vs-select-item>
-          <vs-option value="AP">AP</vs-option>
-          <option value="AM">AM</option>
-          <option value="BA">BA</option>
-          <option value="CE">CE</option>
-          <option value="DF">DF</option>
-          <option value="ES">ES</option>
-          <option value="GO">GO</option>
-          <vs-select-item value="MA">MA</vs-select-item>
-          <option value="MG">MG</option>
-          <option value="MT">MT</option>
-          <option value="MS">MS</option>
-          <option value="PA">PA</option>
-          <option value="PB">PB</option>
-          <option value="PR">PR</option>
-          <option value="PE">PE</option>
-          <option value="PI">PI</option>
-          <option value="RJ">RJ</option>
-          <option value="RN">RN</option>
-          <option value="RS">RS</option>
-          <option value="RO">RO</option>
-          <option value="RR">RR</option>
-          <option value="SC">SC</option>
-          <option value="SP">SP</option>
-          <option value="SE">SE</option>
-          <option value="TO">TO</option>-->
-          </vs-select>
-        </div>
-        <vs-divider></vs-divider>
-      <vs-button @click="$vs.notify({title:'Sucesso',
-      text:'Informações Salvas',
-      color:'success'})" color="success"
-      type="gradient" name="submit" @click.prevent="postPost()">Enviar</vs-button>
-    <!--</fieldset>-->
-      </form>
-    </vs-card>
-  </vs-col>
+                    <div class="con-select-example">
+                      <vs-select
+                      class="selectExample" 
+                      name="estado" 
+                      id="estado" 
+                      label="Estado"
+                      v-model="selectestado">
+                      <!--em construção
+                        <vs-select-item value>--</vs-select-item>
+                        <vs-select-item value="AL" v-text="AL"></vs-select-item>
+                      <vs-option value="AP">AP</vs-option>
+                      <option value="AM">AM</option>
+                      <option value="BA">BA</option>
+                      <option value="CE">CE</option>
+                      <option value="DF">DF</option>
+                      <option value="ES">ES</option>
+                      <option value="GO">GO</option>
+                      <vs-select-item value="MA">MA</vs-select-item>
+                      <option value="MG">MG</option>
+                      <option value="MT">MT</option>
+                      <option value="MS">MS</option>
+                      <option value="PA">PA</option>
+                      <option value="PB">PB</option>
+                      <option value="PR">PR</option>
+                      <option value="PE">PE</option>
+                      <option value="PI">PI</option>
+                      <option value="RJ">RJ</option>
+                      <option value="RN">RN</option>
+                      <option value="RS">RS</option>
+                      <option value="RO">RO</option>
+                      <option value="RR">RR</option>
+                      <option value="SC">SC</option>
+                      <option value="SP">SP</option>
+                      <option value="SE">SE</option>
+                      <option value="TO">TO</option>-->
+                      </vs-select>
+                    </div>
+                    <vs-divider></vs-divider>
+                  <vs-button @click="$vs.notify({title:'Sucesso',
+                  text:'Informações Salvas',
+                  color:'success'})" color="success"
+                  type="gradient" name="submit" @click.prevent="postPost()">Enviar</vs-button>
+                <!--</fieldset>-->
+        </form>
+      </vs-card>
+    </vs-col>
   </vs-row>
-  </template>
+</template>
 
 
 <!--alterações Ailton-Sama -->
