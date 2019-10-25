@@ -1,6 +1,5 @@
 <template>
-  <vs-row vs-justify="center">
-  <vs-card>
+ <vs-card>
   <form action="#" method="post">
     <div class="campo">
     <h5>
@@ -164,7 +163,6 @@
     <!--</fieldset>-->
       </form>
     </vs-card>
-  </vs-row>
 </template>
 
 
