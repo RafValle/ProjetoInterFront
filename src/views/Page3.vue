@@ -36,7 +36,7 @@
           icon-pack="feather"
           label-placeholder="CPF"
           style="width: 50em"
-          v-model="CPF"
+          v-model="cpf"
           value="CpfOfendida"
           class="w-full no-icon-border"/>
           
@@ -46,7 +46,7 @@
           icon-pack="feather"
           label-placeholder="RG da Ofendida"
           style="width: 50em"
-          v-model="CPF"
+          v-model="rgofendida"
           value="RG da Ofendida"
           class="w-full no-icon-border"/>
 
@@ -185,6 +185,9 @@ export default {
   data: () => ({
     postsBody: [],
     errors: [],
+    nome: '',
+    cpf: '',
+    rgfofendida: '',
     cidade: '',
     title: '',
     username: '',
@@ -208,9 +211,12 @@ export default {
   methods: {
     postPost() {
       console.log(this.cidade)
+      console.log(this.nome)
+      console.log(this.cpf)
+      console.log(this.rgofendida)
       axios
         .post(`http://localhost:3333/processos`, {
-          body: {cidade: this.cidade, nome: this.nome}
+          body: {cidade: this.cidade, nome: this.nome, cpf: this.cpf, rgofendida: this.rgfofendida}
         })
         .then(response => {
           this.form = response.data;
