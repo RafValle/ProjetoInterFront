@@ -1,6 +1,9 @@
 <template>
-  <form action="#" method="post">
-    <div class="campo">
+<vs-row vs-justify="center">
+<vs-col type="flex" vs-justify="center" vs-align="center" vs-w="12">
+<vs-card>
+<form action="#" method="post">
+   <div class="campo">
     <h5>
         SECRETARIA DE SEGURANÇA PÚBLICA DO MARANHÃO
             DELEGACIA GERAL DE POLÍCIA CIVIL
@@ -10,144 +13,166 @@
     </h5>
     </div>
     <div class="titulo">
-    <h2>QUESTIONÁRIO DE AVALIAÇÃO DE RISCO</h2>
-    </div>
-    <fieldset>
-      <fieldset class="grupo">
-        <div class="campo">
-          <label for="nome">Nome</label>
-          <input
-            type="text"
-            id="nome"
-            name="nome"
-            style="width: 40em"
-            v-model="postsBody"
-            value="nomeOfendida"
-          />
-          <label for="nome">CPF</label>
-          <input
-            type="text"
-            id="CPF"
-            name="CPF"
-            style="width: 40em"
-            v-model="postsBody"
-            value="cpfOfendida"
-          />
-          <label for="nome">Rg da Ofendida</label>
-          <input
-            type="text"
-            id="RG"
-            name="CPF"
-            style="width: 40em"
-            v-model="postsBody"
-            value="rgOfendida"
-          />
-          <label for="nome">Data de nascimento da Ofendida</label>
-          <input
-            type="text"
-            id="DATANASOFE"
-            name="DataNascimentoOfendida"
-            style="width: 40em"
-            v-model="postsBody"
-            value="dataNascimentoOfendida"
-          />
-          <label for="nome">Documento de Identidade?</label>
-          <label>
-            <input type="radio" name="sexo" value="true" v-model="postsBody" /> Sim
-          </label>
-          <label>
-            <input type="radio" name="sexo" value="false" v-model="postsBody" /> Não
-          </label>
-          <label for="nome">Trouxe comprovante de residencia?</label>
-          <label>
-            <input type="radio" name="sexo" value="true" v-model="postsBody" /> Sim
-          </label>
-          <label>
-            <input type="radio" name="sexo" value="false" v-model="postsBody" /> Não
-          </label>
-          <label for="nome">Filiação Ofendida(Mãe ou Pai)</label>
-          <input
-            type="text"
-            id="CPF"
-            name="CPF"
-            style="width: 40em"
-            v-model="postsBody"
-            value="filiacaoOfendida"
-          />
-          <label for="nome">Endereço da Ofendida</label>
-          <input
-            type="text"
-            id="CPF"
-            name="CPF"
-            style="width: 40em"
-            v-model="postsBody"
-            value="enderecoOfendida"
-          />
-        </div>
-        <div class="campo"></div>
-      </fieldset>
+    <h2>Avaliação de Risco</h2>
+       </div>
+    <!--<fieldset>
+      <fieldset class="grupo">-->
+        
+        <div class="vx-card__title mb-8">
 
-      <div class="campo">
-        <label for="telefone">Telefone</label>
-        <input type="text" id="telefone" name="telefone" style="width: 10em" v-model="postsBody"/>
-      </div>
+          <vs-input
+          icon="icon icon-user"
+          id="nome"
+          icon-pack="feather"
+          label-placeholder="Nome"
+          style="width: 50em"
+          v-model="nome"
+          value="nomeOfendida"
+          class="w-full no-icon-border"/>
 
-      <fieldset class="grupo">
-        <div class="campo">
-          <label for="cidade">Cidade</label>
-          <input type="text" id="cidade" name="cidade" style="width: 10em" v-model="postsBody"/>
-        </div>
-        <div class="campo">
-          <label for="estado">Estado</label>
-          <select name="estado" id="estado" v-model="postsBody">
-            <option value>--</option>
-            <option value="AL">AL</option>
-          <option value="AP">AP</option>
-          <option value="AM">AM</option>
-          <option value="BA">BA</option>
-          <option value="CE">CE</option>
-          <option value="DF">DF</option>
-          <option value="ES">ES</option>
-          <option value="GO">GO</option>
-          <option selected="selected" value="MA">MA</option>
-          <option value="MG">MG</option>
-          <option value="MT">MT</option>
-          <option value="MS">MS</option>
-          <option value="PA">PA</option>
-          <option value="PB">PB</option>
-          <option value="PR">PR</option>
-          <option value="PE">PE</option>
-          <option value="PI">PI</option>
-          <option value="RJ">RJ</option>
-          <option value="RN">RN</option>
-          <option value="RS">RS</option>
-          <option value="RO">RO</option>
-          <option value="RR">RR</option>
-          <option value="SC">SC</option>
-          <option value="SP">SP</option>
-          <option value="SE">SE</option>
-          <option value="TO">TO</option>
-          </select>
-        </div>
-      </fieldset>
-      <button type="submit" name="submit" @click="postPost()">Enviar</button>
-    </fieldset>
-  </form>
+          <vs-input
+          icon="icon icon-user"
+          id="CPF"
+          icon-pack="feather"
+          label-placeholder="CPF"
+          style="width: 50em"
+          v-model="CPF"
+          value="CpfOfendida"
+          class="w-full no-icon-border"/>
+          
+          <vs-input
+          icon="icon icon-user"
+          id="RGOfendida"
+          icon-pack="feather"
+          label-placeholder="RG da Ofendida"
+          style="width: 50em"
+          v-model="CPF"
+          value="RG da Ofendida"
+          class="w-full no-icon-border"/>
+
+          <vs-input
+          icon="icon icon-user"
+          id="filiofendida"
+          icon-pack="feather"
+          label-placeholder="Filiação Ofendida(Mãe ou Pai)"
+          style="width: 50em"
+          v-model="filiofendida"
+          value="filiacao ofendida"
+          class="w-full no-icon-border"/>
+
+          <vs-input
+          icon="icon icon-user"
+          id="enderofendida"
+          icon-pack="feather"
+          label-placeholder="Endereço da Ofendida"
+          style="width: 50em"
+          v-model="enderofendida"
+          value="enderecoOfendida"
+          class="w-full no-icon-border"/>
+            <vs-divider></vs-divider>             
+  
+                  <label for="nome">Documento de Identidade?</label>
+                    <div class="checkbox">
+                      <vs-checkbox  
+                        class="mb-3"
+                        name= "documentoidentidade"
+                        value="true"
+                        v-model="opcoes"> Sim           
+                      </vs-checkbox>
+                    </div>
+                    <div class="checkbox">
+                      <vs-checkbox  
+                        class="mb-3"
+                        name= "documentoidentidade"
+                        value="false"
+                        v-model="opcoes"> Não           
+                      </vs-checkbox>
+                    </div>
+                    
+                  <label for="nome">Trouxe comprovante de residencia?</label>
+                      <div class="checkbox">
+                        <vs-checkbox  
+                          class="mb-3"
+                          name= "comprovante de residencia"
+                          value="true"
+                          v-model="opcoes"> Sim           
+                        </vs-checkbox>
+                      </div>
+                      <div class="checkbox">
+                        <vs-checkbox  
+                          class="mb-3"
+                          name= "comprovante de residencia"
+                          value="false"
+                          v-model="opcoes"> Não           
+                        </vs-checkbox>
+                      </div>
+     
+                      <div class="centerx labelx">
+                        <vs-input
+                        id="Telefone" 
+                        label="Telefone da Ofendida"
+                        
+                        v-model="telefone"/>
+                        <vs-input
+                        id="Cidade" 
+                        label="Cidade" 
+                        v-model="cidade"/>
+                      </div>
+                            
+                    </div>
+
+
+                    <div class="con-select-example">
+                      <vs-select
+                      class="selectExample" 
+                      name="estado" 
+                      id="estado" 
+                      label="Estado"
+                      v-model="selectestado">
+                      <!--em construção
+                        <vs-select-item value>--</vs-select-item>
+                        <vs-select-item value="AL" v-text="AL"></vs-select-item>
+                      <vs-option value="AP">AP</vs-option>
+                      <option value="AM">AM</option>
+                      <option value="BA">BA</option>
+                      <option value="CE">CE</option>
+                      <option value="DF">DF</option>
+                      <option value="ES">ES</option>
+                      <option value="GO">GO</option>
+                      <vs-select-item value="MA">MA</vs-select-item>
+                      <option value="MG">MG</option>
+                      <option value="MT">MT</option>
+                      <option value="MS">MS</option>
+                      <option value="PA">PA</option>
+                      <option value="PB">PB</option>
+                      <option value="PR">PR</option>
+                      <option value="PE">PE</option>
+                      <option value="PI">PI</option>
+                      <option value="RJ">RJ</option>
+                      <option value="RN">RN</option>
+                      <option value="RS">RS</option>
+                      <option value="RO">RO</option>
+                      <option value="RR">RR</option>
+                      <option value="SC">SC</option>
+                      <option value="SP">SP</option>
+                      <option value="SE">SE</option>
+                      <option value="TO">TO</option>-->
+                      </vs-select>
+                    </div>
+                    <vs-divider></vs-divider>
+                  <vs-button @click="$vs.notify({title:'Sucesso',
+                  text:'Informações Salvas',
+                  color:'success'})" color="success"
+                  type="gradient" name="submit" @click.prevent="postPost()">Enviar</vs-button>
+                <!--</fieldset>-->
+        </form>
+      </vs-card>
+    </vs-col>
+  </vs-row>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      title: '',
-      username: '',
-      siteUsername: '',
-      amount: '',
-      textarea: '',
-    }
-  }
-}
-</script>
 
+
+<!--alterações Ailton-Sama -->
 
 <script>
 import axios from "axios";
@@ -157,16 +182,18 @@ const base = axios.create({
 });
 
 export default {
-  data() {
-    postsBody: null;
-    return {
-      postsBody: [],
-      errors: []
-    };
-  },
-
+  data: () => ({
+    postsBody: [],
+    errors: [],
+    cidade: '',
+    title: '',
+    username: '',
+    siteUsername: '',
+    amount: '',
+    textarea: '',
+  }),
   // Fetches posts when the component is created.
-  created() {
+  created () {
     console.log("Conectando front com API!");
     axios
       .get(`http://localhost:3333`)
@@ -178,25 +205,26 @@ export default {
         this.errors.push(e);
       });
   },
-
-  postPost() {
-    axios
-      .post(`http://localhost:3333/processos`, {
-        body: this.postsBody
-      })
-      .then(response => {
-        this.form = response.data;
-      })
-      .catch(e => {
-        this.errors.push(e);
-      });
+  methods: {
+    postPost() {
+      console.log(this.cidade)
+      axios
+        .post(`http://localhost:3333/processos`, {
+          body: {cidade: this.cidade, nome: this.nome}
+        })
+        .then(response => {
+          this.form = response.data;
+        })
+        .catch(e => {
+          this.errors.push(e);
+        });
+    },
+    funcao2 () {
+      console.log('teste')
+    }
   }
 };
 </script>
-
-
-
-
 
 <style>
 * {
@@ -229,6 +257,7 @@ button {
 
 .campo {
   margin-bottom: 1em;
+  
 }
 
 .titulo {
@@ -237,7 +266,7 @@ button {
 }
 
 .campo label {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.5em;
   color: #666;
   display: block;
 }
