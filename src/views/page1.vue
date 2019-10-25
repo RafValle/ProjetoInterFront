@@ -1,4 +1,6 @@
 <template>
+  <vs-row vs-justify="center">
+  <vs-card>
   <form action="#" method="post">
     <div class="campo">
     <h5>
@@ -160,7 +162,9 @@
       color:'success'})" color="success"
       type="gradient" name="submit" @click.prevent="postPost()">Enviar</vs-button>
     <!--</fieldset>-->
-  </form>
+      </form>
+    </vs-card>
+  </vs-row>
 </template>
 
 
