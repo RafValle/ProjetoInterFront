@@ -1,4 +1,6 @@
 <template>
+<vs-row vs-justify="center">
+<vs-col type="flex" vs-justify="center" vs-align="center" vs-w="11">
  <vs-card>
   <form action="#" method="post">
     <div class="campo">
@@ -12,9 +14,10 @@
     </div>
     <div class="titulo">
     <h2>MPU</h2>
-    </div>
+       </div>
     <!--<fieldset>
       <fieldset class="grupo">-->
+        
         <div class="vx-card__title mb-8">
 
           <vs-input
@@ -66,43 +69,44 @@
           v-model="enderofendida"
           value="enderecoOfendida"
           class="w-full no-icon-border"/>
-            <vs-divider></vs-divider>
-                  
-              <label for="nome">Documento de Identidade?</label>
-                <div class="checkbox">
-                  <vs-checkbox  
-                    class="mb-3"
-                    name= "sexo"
-                    value="true"
-                    v-model="opcoes"> Sim           
-                  </vs-checkbox>
-                </div>
-                <div class="checkbox">
-                  <vs-checkbox  
-                    class="mb-3"
-                    name= "sexo"
-                    value="false"
-                    v-model="opcoes"> Não           
-                  </vs-checkbox>
-                </div>
-              <label for="nome">Trouxe comprovante de residencia?</label>
-                  <div class="checkbox">
-                    <vs-checkbox  
-                      class="mb-3"
-                      name= "sexo"
-                      value="true"
-                      v-model="opcoes"> Sim           
-                    </vs-checkbox>
-                  </div>
-                  <div class="checkbox">
-                    <vs-checkbox  
-                      class="mb-3"
-                      name= "sexo"
-                      value="false"
-                      v-model="opcoes"> Não           
-                    </vs-checkbox>
-                  </div>
-
+            <vs-divider></vs-divider>             
+  
+                  <label for="nome">Documento de Identidade?</label>
+                    <div class="checkbox">
+                      <vs-checkbox  
+                        class="mb-3"
+                        name= "sexo"
+                        value="true"
+                        v-model="opcoes"> Sim           
+                      </vs-checkbox>
+                    </div>
+                    <div class="checkbox">
+                      <vs-checkbox  
+                        class="mb-3"
+                        name= "sexo"
+                        value="false"
+                        v-model="opcoes"> Não           
+                      </vs-checkbox>
+                    </div>
+                    
+                  <label for="nome">Trouxe comprovante de residencia?</label>
+                      <div class="checkbox">
+                        <vs-checkbox  
+                          class="mb-3"
+                          name= "comprovante de residencia"
+                          value="true"
+                          v-model="opcoes"> Sim           
+                        </vs-checkbox>
+                      </div>
+                      <div class="checkbox">
+                        <vs-checkbox  
+                          class="mb-3"
+                          name= "comprovante de residencia"
+                          value="false"
+                          v-model="opcoes"> Não           
+                        </vs-checkbox>
+                      </div>
+     
           <div class="centerx labelx">
             <vs-input
             id="Telefone" 
@@ -163,7 +167,9 @@
     <!--</fieldset>-->
       </form>
     </vs-card>
-</template>
+  </vs-col>
+  </vs-row>
+  </template>
 
 
 <!--alterações Ailton-Sama -->
