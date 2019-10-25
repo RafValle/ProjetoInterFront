@@ -14,43 +14,49 @@
     </div>
     <fieldset>
       <fieldset class="grupo">
-        <div class="campo">
-          Nome
-          <vs-input label-placeholder for="Nome"
-            type="text"
-            id="nome"
-            name="nome"
-            style="width: 40em"
-            v-model="nome"
-            value="nomeOfendida"/>
+        <div class="vx-card__title mb-8">
 
-          CPF
-          <vs-input label-placeholder for="CPF"
-            type="text"
-            id="CPF"
-            name="CPF"
-            style="width: 40em"
-            v-model="CPF"
-            value="CPFOfendida"/>
+          <vs-input
+          icon="icon icon-user"
+          id="nome"
+          icon-pack="feather"
+          label-placeholder="Nome"
+          style="width: 50em"
+          v-model="nome"
+          value="nomeOfendida"
+          class="w-full no-icon-border"/>
 
-          <label for="nome">Rg da Ofendida</label>
-          <input
-            type="text"
-            id="RG"
-            name="CPF"
-            style="width: 40em"
-            v-model="postsBody"
-            value="rgOfendida"
-          />
-          <label for="nome">Data de nascimento da Ofendida</label>
-          <input
-            type="text"
-            id="DATANASOFE"
-            name="DataNascimentoOfendida"
-            style="width: 40em"
-            v-model="postsBody"
-            value="dataNascimentoOfendida"
-          />
+
+          <vs-input
+          icon="icon icon-user"
+          id="CPF"
+          icon-pack="feather"
+          label-placeholder="CPF"
+          style="width: 50em"
+          v-model="CPF"
+          value="CpfOfendida"
+          class="w-full no-icon-border"/>
+          
+          <vs-input
+          icon="icon icon-user"
+          id="RGOfendida"
+          icon-pack="feather"
+          label-placeholder="RG da Ofendida"
+          style="width: 50em"
+          v-model="CPF"
+          value="RG da Ofendida"
+          class="w-full no-icon-border"/>
+
+          <vs-input
+          icon="icon icon-user"
+          id="DATANASOFE"
+          icon-pack="feather"
+          label-placeholder="Data de Nascimento"
+          style="width: 50em"
+          v-model="data"
+          value="dataNascimentoOfendida"
+          class="w-full no-icon-border"/>
+
           <label for="nome">Documento de Identidade?</label>
               <div class="checkbox">
                 <vs-checkbox  
@@ -115,7 +121,7 @@
       <fieldset class="grupo">
         <div class="campo">
           <label for="cidade">Cidade</label>
-          <input type="text" id="cidade" name="cidade" style="width: 10em" v-model="postsBody"/>
+          <input type="text" id="cidade" name="cidade" style="width: 10em" v-model="cidade"/>
         </div>
         <div class="campo">
           <label for="estado">Estado</label>
@@ -150,24 +156,10 @@
           </select>
         </div>
       </fieldset>
-      <button type="submit" name="submit" @click="postPost()">Enviar</button>
+      <button type="submit" name="submit" @click.prevent="postPost()">Enviar</button>
     </fieldset>
   </form>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      title: '',
-      username: '',
-      siteUsername: '',
-      amount: '',
-      textarea: '',
-    }
-  }
-}
-</script>
-
 
 <script>
 import axios from "axios";
@@ -177,16 +169,18 @@ const base = axios.create({
 });
 
 export default {
-  data() {
-    postsBody: null;
-    return {
-      postsBody: [],
-      errors: []
-    };
-  },
-
+  data: () => ({
+    postsBody: [],
+    errors: [],
+    cidade: '',
+    title: '',
+    username: '',
+    siteUsername: '',
+    amount: '',
+    textarea: '',
+  }),
   // Fetches posts when the component is created.
-  created() {
+  created () {
     console.log("Conectando front com API!");
     axios
       .get(`http://localhost:3333`)
@@ -198,18 +192,23 @@ export default {
         this.errors.push(e);
       });
   },
-
-  postPost() {
-    axios
-      .post(`http://localhost:3333/processos`, {
-        body: this.postsBody
-      })
-      .then(response => {
-        this.form = response.data;
-      })
-      .catch(e => {
-        this.errors.push(e);
-      });
+  methods: {
+    postPost() {
+      console.log(this.cidade)
+      axios
+        .post(`http://localhost:3333/processos`, {
+          body: {cidade: this.cidade, nome: this.nome}
+        })
+        .then(response => {
+          this.form = response.data;
+        })
+        .catch(e => {
+          this.errors.push(e);
+        });
+    },
+    funcao2 () {
+      console.log('teste')
+    }
   }
 };
 </script>
@@ -245,6 +244,7 @@ button {
 
 .campo {
   margin-bottom: 1em;
+  
 }
 
 .titulo {

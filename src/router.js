@@ -34,7 +34,14 @@ const router = new Router({
           path: "/page3",
           name: "page-3",
           component: () => import("./views/Page3.vue")
+        },
+        {
+          path: "/pages/profile",
+          name: "profile",
+          component: () => import("@/views/pages/profile.vue")
         }
+
+
       ]
     },
     // =============================================================================
@@ -57,6 +64,7 @@ const router = new Router({
           name: "page-error-404",
           component: () => import("@/views/pages/Error404.vue")
         }
+
       ]
     },
     // Redirect to 404 page, if no match found
