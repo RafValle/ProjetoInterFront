@@ -22,22 +22,22 @@
 
           <vs-input
           icon="icon icon-user"
-          id="nome"
-          icon-pack="feather"
-          label-placeholder="Nome"
-          style="width: 50em"
-          v-model="nome"
-          value="nomeOfendida"
-          class="w-full no-icon-border"/>
-
-          <vs-input
-          icon="icon icon-user"
           id="CPF"
           icon-pack="feather"
           label-placeholder="CPF"
           style="width: 50em"
           v-model="CPF"
           value="CpfOfendida"
+          class="w-full no-icon-border"/>
+
+          <vs-input
+          icon="icon icon-user"
+          id="nome"
+          icon-pack="feather"
+          label-placeholder="Nome"
+          style="width: 50em"
+          v-model="nome"
+          value="nomeOfendida"
           class="w-full no-icon-border"/>
           
           <vs-input
