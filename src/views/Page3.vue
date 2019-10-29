@@ -162,7 +162,7 @@
                     <vs-divider></vs-divider>
                   <vs-button @click="$vs.notify({title:'Sucesso',
                   text:'Informações Salvas',
-                  color:'success'})" color="success"
+                  color:'success'})" color="primary"
                   type="gradient" name="submit" @click.prevent="postPost()">Enviar</vs-button>
                 <!--</fieldset>-->
         </form>

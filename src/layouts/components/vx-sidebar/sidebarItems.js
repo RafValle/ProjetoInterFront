@@ -1,5 +1,11 @@
 export default [
   {
+    url: "/home",
+    name: "Home",
+    slug: "home",
+    icon: "HomeIcon",
+  }, 
+  {
     url: "/page1",
     name: "MPU",
     slug: "page1",

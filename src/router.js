@@ -20,6 +20,12 @@ const router = new Router({
         // =============================================================================
         // Theme Routes
         // =============================================================================
+        
+        {
+          path: "/home",
+          name: "home",
+          component: () => import("@/views/pages/home.vue")
+        },             
         {
           path: "/page1",
           name: "page-1",
@@ -63,6 +69,11 @@ const router = new Router({
           path: "/pages/error-404",
           name: "page-error-404",
           component: () => import("@/views/pages/Error404.vue")
+        },
+        {
+          path: "/pages/register",
+          name: "page-register",
+          component: () => import("@/views/pages/register.vue")
         }
 
       ]
