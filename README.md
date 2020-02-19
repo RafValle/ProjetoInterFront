@@ -1,7 +1,7 @@
 #Projeto interdisciplinar
 
--Carlos
 -Rafael
 -Marcelo
 -Hugo
 -Felipe
+-Alan
