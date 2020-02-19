@@ -95,7 +95,7 @@
                           class="mb-3"
                           name= "comprovante de residencia"
                           value="true"
-                          v-model="TRUE"> Sim           
+                          v-model="s"> Sim           
                         </vs-checkbox>
                       </div>
                       <div class="checkbox">
@@ -103,7 +103,7 @@
                           class="mb-3"
                           name= "comprovante de residencia"
                           value="false"
-                          v-model="FALSE"> Não           
+                          v-model="n"> Não           
                         </vs-checkbox>
                       </div>
      
