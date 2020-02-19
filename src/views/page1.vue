@@ -36,7 +36,7 @@
           icon-pack="feather"
           label-placeholder="Nome"
           style="width: 50em"
-          v-model="nome"
+          v-model="NOME"
           value="nomeOfendida"
           class="w-full no-icon-border"/>
           
@@ -46,7 +46,7 @@
           icon-pack="feather"
           label-placeholder="RG da Ofendida"
           style="width: 50em"
-          v-model="CPF"
+          v-model="RG"
           value="RG da Ofendida"
           class="w-full no-icon-border"/>
 
@@ -56,7 +56,7 @@
           icon-pack="feather"
           label-placeholder="Filiação Ofendida(Mãe ou Pai)"
           style="width: 50em"
-          v-model="filiofendida"
+          v-model="FILIACAO"
           value="filiacao ofendida"
           class="w-full no-icon-border"/>
 
@@ -66,7 +66,7 @@
           icon-pack="feather"
           label-placeholder="Endereço da Ofendida"
           style="width: 50em"
-          v-model="enderofendida"
+          v-model="END"
           value="enderecoOfendida"
           class="w-full no-icon-border"/>
             <vs-divider></vs-divider>             
@@ -77,7 +77,7 @@
                         class="mb-3"
                         name= "documentoidentidade"
                         value="true"
-                        v-model="opcoes"> Sim           
+                        v-model="TRUE"> Sim           
                       </vs-checkbox>
                     </div>
                     <div class="checkbox">
@@ -85,7 +85,7 @@
                         class="mb-3"
                         name= "documentoidentidade"
                         value="false"
-                        v-model="opcoes"> Não           
+                        v-model="FALSE"> Não           
                       </vs-checkbox>
                     </div>
                     
@@ -95,7 +95,7 @@
                           class="mb-3"
                           name= "comprovante de residencia"
                           value="true"
-                          v-model="opcoes"> Sim           
+                          v-model="TRUE"> Sim           
                         </vs-checkbox>
                       </div>
                       <div class="checkbox">
@@ -103,7 +103,7 @@
                           class="mb-3"
                           name= "comprovante de residencia"
                           value="false"
-                          v-model="opcoes"> Não           
+                          v-model="FALSE"> Não           
                         </vs-checkbox>
                       </div>
      
@@ -185,7 +185,14 @@ export default {
   data: () => ({
     postsBody: [],
     errors: [],
-    cidade: '',
+    CPF: '',
+    NOME:'',
+    RG:'',
+    FILIACAO:'',
+    END:'',
+    CIDADE: '',
+    TRUE: 'Sim',
+    FALSE: 'Não',
     title: '',
     username: '',
     siteUsername: '',
@@ -207,10 +214,28 @@ export default {
   },
   methods: {
     postPost() {
-      console.log(this.cidade)
+      console.log(this.CPF)
+      console.log(this.NOME)
+      console.log(this.RG)
+      console.log(this.FILIACAO)
+      console.log(this.END)
+      console.log(this.CIDADE)
+      console.log(this.TRUE)
+      console.log(this.FALSE)
       axios
         .post(`http://localhost:3333/processos`, {
-          body: {cidade: this.cidade, nome: this.nome}
+          body: {
+            CPF: this.CPF, 
+            NOME: this.NOME,
+            RG:this.RG,
+            FILIACAO:this.FILIACAO,
+            END:this.END,
+            CIDADE:this.CIDADE,
+            TRUE:this.TRUE,
+            FALSE:this.FALSE
+
+
+            }
         })
         .then(response => {
           this.form = response.data;
