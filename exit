@@ -1,0 +1,10 @@
+user.name=RafValle
+user.email=rafael_valle25@hotmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/RafValle/ProjetoInterFront.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
