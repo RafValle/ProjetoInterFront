@@ -1,25 +1,36 @@
 <template>
-<vs-row vs-justify="center">
+<!--<vs-row vs-justify="center">
 <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="12">
-<vs-card>
+<vs-card>-->
 <form action="#" method="post">
-   <div class="campo">
-    <h5>
+   <div class="titulo">
+     <vs-alert active="true">
+    <h4>
         SECRETARIA DE SEGURANÇA PÚBLICA DO MARANHÃO
             DELEGACIA GERAL DE POLÍCIA CIVIL
         SUPERINTENDÊNCIA DE POLÍCIA CIVIL DA CAPITAL
               DELEGACIA ESPECIAL DA MULHER
         PLANTÃO ESPECIALIZADO EM ATENDIMENTO A MULHER
-    </h5>
+    </h4>
+      </vs-alert>
     </div>
+    
     <div class="titulo">
-    <h2>MPU</h2>
-       </div>
+    <h2>REQUERIMENTO DE MEDIDAS PROTETIVAS DE URGÊNCIA (MPU) – 2019 - DEM</h2>
+    </div>
     <!--<fieldset>
       <fieldset class="grupo">-->
-        
-        <div class="vx-card__title mb-8">
 
+        <div class="vx-card__title mb-8">
+          
+          <vs-row vs-justify="center">
+          <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="12">
+          <vs-card actionable class="cardx">
+          
+          <div class="titulo">
+          <h3>QUALIFICAÇÃO DA OFENDIDA </h3>
+          </div>
+          
           <vs-input
           icon="icon icon-user"
           id="CPF"
@@ -37,6 +48,16 @@
           label-placeholder="Nome"
           style="width: 50em"
           v-model="NOME"
+          value="nomeOfendida"
+          class="w-full no-icon-border"/>
+
+          <vs-input
+          icon="icon icon-user"
+          id="nomeSocial"
+          icon-pack="feather"
+          label-placeholder="Nome Social"
+          style="width: 50em"
+          v-model="nomeSocial"
           value="nomeOfendida"
           class="w-full no-icon-border"/>
           
@@ -69,9 +90,17 @@
           v-model="END"
           value="enderecoOfendida"
           class="w-full no-icon-border"/>
-            <vs-divider></vs-divider>             
-  
-                  <label for="nome">Documento de Identidade?</label>
+
+          <vs-divider></vs-divider>     
+
+          <div class="centerx labelx">
+            <vs-input
+               id="Telefone" 
+               label="Telefone da Ofendida"
+               v-model="telefone"/>
+            </div>
+
+             <label for="nome">Documento de Identidade?</label>
                     <div class="checkbox">
                       <vs-checkbox  
                         class="mb-3"
@@ -106,69 +135,146 @@
                           v-model="n"> Não           
                         </vs-checkbox>
                       </div>
-     
-                      <div class="centerx labelx">
-                        <vs-input
-                        id="Telefone" 
-                        label="Telefone da Ofendida"
-                        
-                        v-model="telefone"/>
-                        <vs-input
-                        id="Cidade" 
-                        label="Cidade" 
-                        v-model="cidade"/>
+
+          </vs-card>
+          </vs-col>
+          </vs-row>
+
+
+          <vs-row vs-justify="center">
+          <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="12">
+          <vs-card actionable class="cardx">
+                     
+          <div class="titulo">
+          <h3>QUALIFICAÇÃO DO AUTOR </h3>
+          </div>
+          
+          <vs-input
+          icon="icon icon-user"
+          id="CPF"
+          icon-pack="feather"
+          label-placeholder="CPF"
+          style="width: 50em"
+          v-model="CPF"
+          value="CpfOfendida"
+          class="w-full no-icon-border"/>
+
+          <vs-input
+          icon="icon icon-user"
+          id="nome"
+          icon-pack="feather"
+          label-placeholder="Nome"
+          style="width: 50em"
+          v-model="NOME"
+          value="nomeOfendida"
+          class="w-full no-icon-border"/>
+
+          <vs-input
+          icon="icon icon-user"
+          id="nomeSocial"
+          icon-pack="feather"
+          label-placeholder="Nome Social"
+          style="width: 50em"
+          v-model="nomeSocial"
+          value="nomeOfendida"
+          class="w-full no-icon-border"/>
+          
+          <vs-input
+          icon="icon icon-user"
+          id="RGOfendida"
+          icon-pack="feather"
+          label-placeholder="RG da Ofendida"
+          style="width: 50em"
+          v-model="RG"
+          value="RG da Ofendida"
+          class="w-full no-icon-border"/>
+
+          <vs-input
+          icon="icon icon-user"
+          id="filiofendida"
+          icon-pack="feather"
+          label-placeholder="Filiação Ofendida(Mãe ou Pai)"
+          style="width: 50em"
+          v-model="FILIACAO"
+          value="filiacao ofendida"
+          class="w-full no-icon-border"/>
+
+          <vs-input
+          icon="icon icon-user"
+          id="enderofendida"
+          icon-pack="feather"
+          label-placeholder="Endereço da Ofendida"
+          style="width: 50em"
+          v-model="END"
+          value="enderecoOfendida"
+          class="w-full no-icon-border"/>
+
+          <vs-divider></vs-divider>     
+
+          <div class="centerx labelx">
+            <vs-input
+               id="Telefone" 
+               label="Telefone da Ofendida"
+               v-model="telefone"/>
+            </div>
+
+             <label for="nome">Documento de Identidade?</label>
+                    <div class="checkbox">
+                      <vs-checkbox  
+                        class="mb-3"
+                        name= "documentoidentidade"
+                        value="true"
+                        v-model="TRUE"> Sim           
+                      </vs-checkbox>
+                    </div>
+                    <div class="checkbox">
+                      <vs-checkbox  
+                        class="mb-3"
+                        name= "documentoidentidade"
+                        value="false"
+                        v-model="FALSE"> Não           
+                      </vs-checkbox>
+                    </div>
+                    
+                  <label for="nome">Trouxe comprovante de residencia?</label>
+                      <div class="checkbox">
+                        <vs-checkbox  
+                          class="mb-3"
+                          name= "comprovante de residencia"
+                          value="true"
+                          v-model="s"> Sim           
+                        </vs-checkbox>
                       </div>
+                      <div class="checkbox">
+                        <vs-checkbox  
+                          class="mb-3"
+                          name= "comprovante de residencia"
+                          value="false"
+                          v-model="n"> Não           
+                        </vs-checkbox>
+                      </div>
+
+                 
+                    </vs-card>
+                    </vs-col>
+                    </vs-row>
+     
+                      
                             
                     </div>
 
 
-                    <div class="con-select-example">
-                      <vs-select
-                      class="selectExample" 
-                      name="estado" 
-                      id="estado" 
-                      label="Estado"
-                      v-model="selectestado">
-                      <!--em construção
-                        <vs-select-item value>--</vs-select-item>
-                        <vs-select-item value="AL" v-text="AL"></vs-select-item>
-                      <vs-option value="AP">AP</vs-option>
-                      <option value="AM">AM</option>
-                      <option value="BA">BA</option>
-                      <option value="CE">CE</option>
-                      <option value="DF">DF</option>
-                      <option value="ES">ES</option>
-                      <option value="GO">GO</option>
-                      <vs-select-item value="MA">MA</vs-select-item>
-                      <option value="MG">MG</option>
-                      <option value="MT">MT</option>
-                      <option value="MS">MS</option>
-                      <option value="PA">PA</option>
-                      <option value="PB">PB</option>
-                      <option value="PR">PR</option>
-                      <option value="PE">PE</option>
-                      <option value="PI">PI</option>
-                      <option value="RJ">RJ</option>
-                      <option value="RN">RN</option>
-                      <option value="RS">RS</option>
-                      <option value="RO">RO</option>
-                      <option value="RR">RR</option>
-                      <option value="SC">SC</option>
-                      <option value="SP">SP</option>
-                      <option value="SE">SE</option>
-                      <option value="TO">TO</option>-->
-                      </vs-select>
-                    </div>
-                    <vs-divider></vs-divider>
+                    
+                  <vs-divider></vs-divider>
                   <vs-button @click="$vs.notify({title:'Sucesso',
                   text:'Informações Salvas',
                   color:'success'})" color="primary"
                   type="gradient" name="submit" @click.prevent="postPost()">Enviar</vs-button>
                 <!--</fieldset>-->
         </form>
-      </vs-card>
+      <!--</vs-card>
     </vs-col>
-  </vs-row>
+  </vs-row>-->
 </template>
 
 
