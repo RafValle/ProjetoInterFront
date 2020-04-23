@@ -1,25 +1,80 @@
-<template>
-  
-
-<vs-row vs-justify="center">
-  <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="6">
-    <vs-card>
-      <div slot="header">
-        <h3>
-          Aguarde !
-        </h3>
-      </div>
-      <div>
-        <span>Espaço para novas atualizações.</span>
-      </div>
-      <div slot="footer">
-        <vs-row vs-justify="flex-end">
-          <vs-button type="gradient" color="danger" icon="favorite"></vs-button>
-          <vs-button color="primary" icon="turned_in_not"></vs-button>
-          <vs-button color="rgb(230,230,230)" color-text="rgb(50,50,50)" icon="settings"></vs-button>
-        </vs-row>
-      </div>
-    </vs-card>
-  </vs-col>
-</vs-row>
+<template lang="html">
+	<statistics-card-line
+		icon="UsersIcon"
+		statistic="245"
+		statisticTitle="Numero de Vítimas no Mês"
+		:chartData="subscribersGainedChartData"
+		type='area' />
 </template>
+
+<script>
+import StatisticsCardLine from '@/components/statistics-cards/StatisticsCardLine.vue'
+
+export default {
+  components: {
+    StatisticsCardLine
+  },
+  data() {
+    return {
+      subscribersGainedChartData: {
+          series: [{
+              name: 'Subscribers',
+              data: [28, 40, 36, 52, 38, 60, 55]
+          }],
+          chartOptions: {
+              grid: {
+                  show: false,
+                  padding: {
+                      left: 0,
+                      right: 0
+                  }
+              },
+              chart: {
+                  toolbar: {
+                      show: false,
+                  },
+                  sparkline: {
+                      enabled: true
+                  }
+              },
+              dataLabels: {
+                  enabled: false
+              },
+              stroke: {
+                  curve: 'smooth',
+                  width: 2.5
+              },
+              fill: {
+                  type: 'gradient',
+                  gradient: {
+                      shadeIntensity: 0.9,
+                      opacityFrom: 0.7,
+                      opacityTo: 0.5,
+                      stops: [0, 80, 100]
+                  }
+              },
+              xaxis: {
+                  type: 'numeric',
+                  lines: {
+                      show: false,
+                  },
+                  axisBorder: {
+                      show: false,
+                  },
+                  labels: { show: false }
+              },
+              yaxis: [{
+                  y: 0,
+                  offsetX: 0,
+                  offsetY: 0,
+                  padding: { left: 0, right: 0 },
+              }],
+              tooltip: {
+                  x: { show: false }
+              },
+          },
+      },
+    }
+  }
+}
+</script>
