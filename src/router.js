@@ -22,9 +22,9 @@ const router = new Router({
         // =============================================================================
         
         {
-          path: "/home",
-          name: "home",
-          component: () => import("@/views/pages/home.vue")
+          path: '/',
+          name: 'home',
+          component: () => import('./views/Home.vue')
         },             
         {
           path: "/page1",
