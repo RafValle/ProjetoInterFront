@@ -85,7 +85,7 @@
           icon="icon icon-user"
           id="enderofendida"
           icon-pack="feather"
-          label-placeholder="Endereço da Ofendida"
+          label-placeholder="Endereço"
           style="width: 50em"
           v-model="END"
           value="enderecoOfendida"
@@ -100,42 +100,25 @@
                v-model="telefone"/>
             </div>
 
-             <label for="nome">Documento de Identidade?</label>
+           <vs-divider></vs-divider>  
+
                     <div class="checkbox">
                       <vs-checkbox  
                         class="mb-3"
                         name= "documentoidentidade"
                         value="true"
-                        v-model="TRUE"> Sim           
-                      </vs-checkbox>
-                    </div>
-                    <div class="checkbox">
-                      <vs-checkbox  
-                        class="mb-3"
-                        name= "documentoidentidade"
-                        value="false"
-                        v-model="FALSE"> Não           
+                        v-model="s"> NÃO APRESENTOU COMPROVANTE DE RESIDÊNCIA       
                       </vs-checkbox>
                     </div>
                     
-                  <label for="nome">Trouxe comprovante de residencia?</label>
                       <div class="checkbox">
                         <vs-checkbox  
                           class="mb-3"
                           name= "comprovante de residencia"
                           value="true"
-                          v-model="s"> Sim           
+                          v-model="s"> NÃO APRESENTOU DOC. DE IDENTIFICAÇÃO         
                         </vs-checkbox>
                       </div>
-                      <div class="checkbox">
-                        <vs-checkbox  
-                          class="mb-3"
-                          name= "comprovante de residencia"
-                          value="false"
-                          v-model="n"> Não           
-                        </vs-checkbox>
-                      </div>
-
           </vs-card>
           </vs-col>
           </vs-row>
@@ -147,7 +130,7 @@
                      
           <div class="titulo">
           <h3>QUALIFICAÇÃO DO AUTOR </h3>
-          </div>
+      </div>
           
           <vs-input
           icon="icon icon-user"
@@ -168,16 +151,6 @@
           v-model="NOME"
           value="nomeOfendida"
           class="w-full no-icon-border"/>
-
-          <vs-input
-          icon="icon icon-user"
-          id="nomeSocial"
-          icon-pack="feather"
-          label-placeholder="Nome Social"
-          style="width: 50em"
-          v-model="nomeSocial"
-          value="nomeOfendida"
-          class="w-full no-icon-border"/>
           
           <vs-input
           icon="icon icon-user"
@@ -193,7 +166,7 @@
           icon="icon icon-user"
           id="filiofendida"
           icon-pack="feather"
-          label-placeholder="Filiação Ofendida(Mãe ou Pai)"
+          label-placeholder="Filiação (Mãe ou Pai)"
           style="width: 50em"
           v-model="FILIACAO"
           value="filiacao ofendida"
@@ -203,7 +176,7 @@
           icon="icon icon-user"
           id="enderofendida"
           icon-pack="feather"
-          label-placeholder="Endereço da Ofendida"
+          label-placeholder="Endereço"
           style="width: 50em"
           v-model="END"
           value="enderecoOfendida"
@@ -214,57 +187,22 @@
           <div class="centerx labelx">
             <vs-input
                id="Telefone" 
-               label="Telefone da Ofendida"
+               label="Telefone"
                v-model="telefone"/>
             </div>
-
-             <label for="nome">Documento de Identidade?</label>
-                    <div class="checkbox">
-                      <vs-checkbox  
-                        class="mb-3"
-                        name= "documentoidentidade"
-                        value="true"
-                        v-model="TRUE"> Sim           
-                      </vs-checkbox>
-                    </div>
-                    <div class="checkbox">
-                      <vs-checkbox  
-                        class="mb-3"
-                        name= "documentoidentidade"
-                        value="false"
-                        v-model="FALSE"> Não           
-                      </vs-checkbox>
-                    </div>
-                    
-                  <label for="nome">Trouxe comprovante de residencia?</label>
-                      <div class="checkbox">
-                        <vs-checkbox  
-                          class="mb-3"
-                          name= "comprovante de residencia"
-                          value="true"
-                          v-model="s"> Sim           
-                        </vs-checkbox>
-                      </div>
-                      <div class="checkbox">
-                        <vs-checkbox  
-                          class="mb-3"
-                          name= "comprovante de residencia"
-                          value="false"
-                          v-model="n"> Não           
-                        </vs-checkbox>
-                      </div>
-
-                 
-                    </vs-card>
-                    </vs-col>
-                    </vs-row>
-     
-                      
-                            
-                    </div>
-
-
-                    
+            <vs-divider></vs-divider> 
+              <div class="checkbox">
+                <vs-checkbox  
+                    class="mb-3"
+                    name= "comprovante de residencia"
+                    value="true"
+                    v-model="s"> ENDEREÇO ACIMA INDICADO É O QUE CONSTA NOS SISTEMAS SIGO/SIGMA        
+                </vs-checkbox>
+            </div>
+         </vs-card>
+         </vs-col>
+         </vs-row>
+      </div>
                   <vs-divider></vs-divider>
                   <vs-button @click="$vs.notify({title:'Sucesso',
                   text:'Informações Salvas',
