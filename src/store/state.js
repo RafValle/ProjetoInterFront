@@ -3,6 +3,8 @@ import themeConfig from '@/../themeConfig.js'
 import colors from '@/../themeConfig.js'
 
 const state = {
+    nome: null,
+    cpf: null,
     isSidebarActive: true,
     breakpoint: null,
     sidebarWidth: "default",

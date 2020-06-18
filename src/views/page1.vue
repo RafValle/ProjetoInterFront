@@ -1,7 +1,4 @@
 <template>
-<!--<vs-row vs-justify="center">
-<vs-col type="flex" vs-justify="center" vs-align="center" vs-w="12">
-<vs-card>-->
 <form action="#" method="post">
    <div class="titulo">
      <vs-alert active="true">
@@ -14,29 +11,29 @@
     </h4>
       </vs-alert>
     </div>
-    
-    <div class="titulo">
+
+    <div class="tituloHeader">
     <h2>REQUERIMENTO DE MEDIDAS PROTETIVAS DE URGÊNCIA (MPU) – 2019 - DEM</h2>
     </div>
     <!--<fieldset>
       <fieldset class="grupo">-->
 
         <div class="vx-card__title mb-8">
-          
+
           <vs-row vs-justify="center">
           <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="12">
           <vs-card actionable class="cardx">
-          
+
           <div class="titulo">
           <h3>QUALIFICAÇÃO DA OFENDIDA </h3>
           </div>
-          
+
           <vs-input
           icon="icon icon-user"
           id="CPF"
           icon-pack="feather"
           label-placeholder="CPF"
-          style="width: 50em"
+          style="width: 50%"
           v-model="CPF"
           value="CpfOfendida"
           class="w-full no-icon-border"/>
@@ -60,7 +57,7 @@
           v-model="nomeSocial"
           value="nomeOfendida"
           class="w-full no-icon-border"/>
-          
+
           <vs-input
           icon="icon icon-user"
           id="RGOfendida"
@@ -91,32 +88,32 @@
           value="enderecoOfendida"
           class="w-full no-icon-border"/>
 
-          <vs-divider></vs-divider>     
+          <vs-divider></vs-divider>
 
           <div class="centerx labelx">
             <vs-input
-               id="Telefone" 
+               id="Telefone"
                label="Telefone da Ofendida"
                v-model="telefone"/>
             </div>
 
-           <vs-divider></vs-divider>  
+           <vs-divider></vs-divider>
 
                     <div class="checkbox">
-                      <vs-checkbox  
+                      <vs-checkbox
                         class="mb-3"
                         name= "documentoidentidade"
                         value="true"
-                        v-model="s"> NÃO APRESENTOU COMPROVANTE DE RESIDÊNCIA       
+                        v-model="s"> NÃO APRESENTOU COMPROVANTE DE RESIDÊNCIA
                       </vs-checkbox>
                     </div>
-                    
+
                       <div class="checkbox">
-                        <vs-checkbox  
+                        <vs-checkbox
                           class="mb-3"
                           name= "comprovante de residencia"
                           value="true"
-                          v-model="s"> NÃO APRESENTOU DOC. DE IDENTIFICAÇÃO         
+                          v-model="s"> NÃO APRESENTOU DOC. DE IDENTIFICAÇÃO
                         </vs-checkbox>
                       </div>
           </vs-card>
@@ -127,12 +124,12 @@
           <vs-row vs-justify="center">
           <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="12">
           <vs-card actionable class="cardx">
-                     
+
           <div class="titulo">
           <h3>QUALIFICAÇÃO DO AUTOR </h3>
-      </div>
-          
-          <vs-input
+          </div>
+
+          <vs-inputNew
           icon="icon icon-user"
           id="CPF"
           icon-pack="feather"
@@ -151,7 +148,7 @@
           v-model="NOME"
           value="nomeOfendida"
           class="w-full no-icon-border"/>
-          
+
           <vs-input
           icon="icon icon-user"
           id="RGOfendida"
@@ -182,43 +179,95 @@
           value="enderecoOfendida"
           class="w-full no-icon-border"/>
 
-          <vs-divider></vs-divider>     
+          <vs-divider></vs-divider>
 
           <div class="centerx labelx">
             <vs-input
-               id="Telefone" 
+               id="Telefone"
                label="Telefone"
                v-model="telefone"/>
             </div>
-            <vs-divider></vs-divider> 
+            <vs-divider></vs-divider>
               <div class="checkbox">
-                <vs-checkbox  
+                <vs-checkbox
                     class="mb-3"
                     name= "comprovante de residencia"
                     value="true"
-                    v-model="s"> ENDEREÇO ACIMA INDICADO É O QUE CONSTA NOS SISTEMAS SIGO/SIGMA        
+                    v-model="s"> ENDEREÇO ACIMA INDICADO É O QUE CONSTA NOS SISTEMAS SIGO/SIGMA
                 </vs-checkbox>
             </div>
          </vs-card>
          </vs-col>
          </vs-row>
+
+          <vs-row vs-justify="center">
+            <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="12">
+              <vs-card actionable class="cardx">
+
+                <div class="tituloLeft">
+                  <h3>DEPENDENTES</h3>
+                </div>
+
+                <div class="checkbox">
+                  <vs-checkbox
+                    class="mb-3"
+                    name= "comprovante de residencia"
+                    value="true"
+                    v-model="s"> VÍTIMA NÃO POSSUI DEPENDENTES COM O AUTOR
+                  </vs-checkbox>
+                </div>
+              </vs-card>
+            </vs-col>
+          </vs-row>
+
+          <vs-row vs-justify="center">
+            <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="12">
+              <vs-card actionable class="cardx">
+
+                <div class="tituloLeft">
+                  <h3>RESUMO DOS FATOS</h3>
+                </div>
+
+                <div>
+                  <vs-textarea
+                    v-model="textarea"
+                  />
+                  <vs-divider></vs-divider>
+                  <div class="titulo">
+                    <h9>Visto da requerente</h9>
+                  </div>
+                </div>
+
+              </vs-card>
+            </vs-col>
+          </vs-row>
+
       </div>
                   <vs-divider></vs-divider>
+                  <div class="tituloLeft"
                   <vs-button @click="$vs.notify({title:'Sucesso',
                   text:'Informações Salvas',
                   color:'success'})" color="primary"
-                  type="gradient" name="submit" @click.prevent="postPost()">Enviar</vs-button>
+                  type="gradient" name="submit" @click.prevent="postPost()">Enviar
+                  </vs-button>
+
+
+                  <div class="rightBorder">
+                  <vs-button @click="page2({title:'Sucesso',
+                  text:'Informações Salvas',
+                  color:'success'})" color="primary"
+                  type="gradient" name="submit" @click.prevent="postPost(page-2)">Enviar
+                  </vs-button>
+                  </div>
                 <!--</fieldset>-->
         </form>
-      <!--</vs-card>
-    </vs-col>
-  </vs-row>-->
 </template>
 
 
 <!--alterações Ailton-Sama -->
 
 <script>
+
 import axios from "axios";
 
 const base = axios.create({
@@ -269,7 +318,7 @@ export default {
       axios
         .post(`http://localhost:3333/processos`, {
           body: {
-            CPF: this.CPF, 
+            CPF: this.CPF,
             NOME: this.NOME,
             RG:this.RG,
             FILIACAO:this.FILIACAO,
@@ -326,12 +375,31 @@ button {
 
 .campo {
   margin-bottom: 1em;
-  
+
 }
 
 .titulo {
   margin-bottom: 1em;
   text-align: center
+}
+
+.tituloHeader {
+  margin-top: 1cm ;
+  margin-bottom: 1cm;
+  text-align: center
+}
+
+.tituloLeft{
+  margin-bottom: 2em;
+  margin-left: 5px;
+  text-align: left;
+
+}
+
+.rightBorder{
+  margin-left: 5px;
+  text-align: right;
+
 }
 
 .campo label {

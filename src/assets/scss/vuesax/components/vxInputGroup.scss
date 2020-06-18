@@ -148,6 +148,10 @@
       width: 100%;
     }
 
+    .vs-inputNew {
+      width: 50%;
+    }
+
     // remove right radius if not last child
     &:not(:last-child) {
       input {

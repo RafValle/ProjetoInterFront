@@ -17,7 +17,7 @@
                                     icon="icon icon-user"
                                     icon-pack="feather"
                                     label-placeholder="Matricula"
-                                    v-model="matricula"
+                                    v-model="email"
                                     class="w-full no-icon-border"/>
 
                                 <vs-input
@@ -40,7 +40,7 @@
                                 <div class="social-login flex flex-wrap justify-between">
                                     <div class="social-login-buttons flex flex-wrap items-center mt-4">
 
-                                        <!-- facebook 
+                                        <!-- facebook
                                         <div class="bg-facebook pt-3 pb-2 px-4 rounded-lg cursor-pointer mr-4">
                                           <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="text-white h-4 w-4 svg-inline--fa fa-facebook-f fa-w-9" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path fill="currentColor" d="M215.8 85H264V3.6C255.7 2.5 227.1 0 193.8 0 124.3 0 76.7 42.4 76.7 120.3V192H0v91h76.7v229h94V283h73.6l11.7-91h-85.3v-62.7c0-26.3 7.3-44.3 45.1-44.3z"></path></svg>
                                         </div> -->
@@ -73,16 +73,40 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex';
 
-export default {
-    data() {
-        return {
-            email: '',
-            password: '',
-            checkbox_remember_me: false
+  export default {
+    name: "Login",
+    data: () => ({
+      isSignIn: true,
+      name: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+      checkbox_remember_me: false
+    }),
+    computed: {
+      ...mapGetters(['status']),
+    },
+    methods: {
+      handleIsSignIn() {
+        this.isSignIn = !this.isSignIn;
+      },
+      async login () {
+        const user = { email: this.email, password: this.password }
+        await this.$store.dispatch('signInAction', user)
+      },
+      async register () {
+        if (this.password === this.confirmPassword) {
+          const user = { name: this.name, email: this.email, password: this.password }
+          await this.$store.dispatch('signUpAction', user)
+        } else {
+          alert('As senhas informadas não estão iguais, por favor, revise-as')
         }
+      },
     }
-}
+  }
+
 </script>
 
 <style lang="scss">
